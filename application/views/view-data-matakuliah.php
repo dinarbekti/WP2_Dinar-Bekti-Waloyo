@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Form Input Matakuliah </title>
+   <title>Tampil Data Matakuliah</title>
 </head>
 <body>
       <center>
-         <form action="<?= base_url('Matakuliah/cetak'); ?>"method="post">
          <table>
             <tr>
                <th colspan="3">
-                  Form Input Data Mata Kuliah
+                  Tampil Data Mata Kuliah
                </th>
             </tr>
                <tr>
@@ -21,37 +20,29 @@
                   <th>Kode Mtk</th>
                   <th>:</th>
                   <td>
-                     <input type="text" name="kode" id="kode">
-                     <div class="col-sm-6 col-danger"><?= form_error('kode'); ?> </div>
+                     <?=$kode; ?>
                   </td>
                </tr>
                <tr>
                   <th>Nama Mtk</th>
                   <th>:</th>
                   <td>
-                     <input type="text" name="nama" id="nama">
-                     <div class="col-sm-6 col-danger"><?= form_error('nama'); ?> </div>
+                     <?=$nama; ?>
                   </td>
                </tr>
                <tr>
                   <td>SKS</td>
                   <td>:</td>
                   <td>
-                     <select name="sks" id="sks">
-                        <option value="">PILIH SKS</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                     </select>
+                     <?=$sks; ?>
                   </td>
                </tr>
                <tr>
                   <td colspan="3" align="center">
-                     <input type="submit" value="Submit">
+                     <a href="<?= base_url('Matakuliah'); ?>">Kembali</a>
                   </td>
                </tr>
          </table>
-      </form>
       </center>
 </body>
 </html>
